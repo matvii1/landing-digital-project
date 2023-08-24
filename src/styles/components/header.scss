@@ -1,0 +1,48 @@
+@use '../utils/' as *;
+
+.header {
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    font-size: 12px;
+  }
+
+  &__logo {
+    cursor: pointer;
+  }
+
+  &__item {
+    padding: 0.25rem 0;
+    position: relative;
+
+    &::after {
+      @include border-pseudo(0, unset);
+    }
+
+    &::before {
+      @include border-pseudo(unset, 0);
+    }
+
+    &:not(.header__item--active):hover {
+      &::after,
+      &::before {
+        width: 100%;
+      }
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &--active {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+    }
+  }
+}

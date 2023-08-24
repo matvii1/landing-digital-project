@@ -1,0 +1,71 @@
+@use '../vars' as *;
+@use '../utils' as *;
+
+.footer-outer {
+  margin-top: $section-m-top;
+  padding: 2rem 0 0.4rem;
+  background: $black;
+  color: $white;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  font-size: 0.95rem;
+
+  &__logo {
+    width: 6.6rem;
+    height: 6.6rem;
+    object-fit: contain;
+    cursor: pointer;
+  }
+
+  &-col {
+    max-width: 34%;
+
+    &__list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+
+      &--social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+
+    &__link {
+      color: $white;
+      text-decoration: none;
+      text-underline-offset: 2px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__secure {
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    color: $black-light;
+    font-size: 0.8rem;
+    text-align: center;
+    border-top: 1px solid $black-footer;
+  }
+}

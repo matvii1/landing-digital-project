@@ -1,0 +1,35 @@
+@use '../vars/' as *;
+@use '../utils/' as *;
+
+.tasks {
+  margin-top: $section-m-top;
+
+  &__title {
+    font-size: $title-big;
+  }
+
+  &__content {
+    margin-top: 2rem;
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__task {
+    width: 50%;
+    display: flex;
+    gap: 2.2rem;
+
+    img {
+      display: inline;
+      width: 120px;
+      height: 150px;
+      object-fit: contain;
+    }
+  }
+
+  &__task:first-child {
+    p {
+      max-width: 170px;
+    }
+  }
+}

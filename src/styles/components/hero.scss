@@ -1,0 +1,90 @@
+@use '../utils/' as *;
+@use '../vars/' as *;
+
+.hero {
+  margin-top: 1rem;
+  display: flex;
+  gap: 80px;
+  align-items: center;
+
+  &__info {
+    position: relative;
+    transform: translateY(5%);
+
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 3rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  &__img {
+    position: relative;
+    width: 60%;
+    height: 630px;
+    object-fit: cover;
+  }
+
+  &__img-button {
+    position: absolute;
+    bottom: 4rem;
+    left: 2rem;
+
+    @include button;
+  }
+}
+
+.hero__buttons {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero__button {
+  @include button;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $gray-light;
+  padding: 0.2rem;
+
+  img {
+    width: 1.8rem;
+  }
+
+  &--prev {
+    img {
+      rotate: 180deg;
+    }
+  }
+
+  &:hover {
+    img {
+      transform: none;
+    }
+  }
+}
+
+.hero__slide-numbers {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: $gray;
+  font-size: 1.35rem;
+}
+
+.light {
+  color: $light-title;
+  font-weight: 300;
+}
+
+.slash {
+  width: 2rem;
+}

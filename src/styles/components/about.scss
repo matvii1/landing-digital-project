@@ -1,0 +1,46 @@
+@use '../vars/' as *;
+@use '../utils/' as *;
+
+.about {
+  margin-top: 2rem;
+  padding: 2rem 5rem 1rem 5rem;
+  background-color: $gray-light;
+  display: flex;
+  gap: 2rem;
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 180px 200px;
+    grid-template-rows: 250px 120px;
+    grid-gap: 1rem;
+    margin-bottom: -5rem !important;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  &__title {
+    font-size: $title-big;
+  }
+
+  &__desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  &__img {
+    &--shifted {
+      margin-top: 2rem;
+      height: 300px;
+    }
+  }
+
+  &__button {
+    margin-top: 0.5rem;
+    @include button;
+  }
+}

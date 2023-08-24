@@ -1,0 +1,48 @@
+@use '../vars' as *;
+@use '../utils' as *;
+
+.contact-us {
+  margin-top: $section-m-top;
+
+  &__title {
+    font-size: $title-big;
+  }
+
+  &__content {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+  }
+
+  &__img {
+    height: 355px;
+    display: block;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    min-width: 290px;
+    gap: 1.2rem;
+  }
+
+  &__button {
+    @include dark-button;
+    align-self: flex-start;
+    border-radius: 0.25rem;
+  }
+}
+
+.form__input {
+  padding: 0.9rem 1.2rem;
+  font-family: inherit;
+  width: 100%;
+  border-radius: 0.25rem;
+  background-color: $gray-light;
+  border: none;
+
+  &--message {
+    resize: none;
+  }
+}
